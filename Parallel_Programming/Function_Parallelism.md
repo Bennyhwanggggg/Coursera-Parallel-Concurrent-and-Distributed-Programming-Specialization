@@ -41,3 +41,34 @@ The memoization pattern lends itself easily to parallelization using futures by 
 Optional Reading:
 
 1. Wikipedia article on Memoization.
+
+## 2.4 Java Streams
+
+**Lecture Summary**: In this lecture we learned about Java streams, and how they provide a functional approach to operating on collections of data. For example, the statement, “students.stream().forEach(s → System.out.println(s));”, is a succinct way of specifying an action to be performed on each element s in the collection, students. An aggregate data query or data transformation can be specified by building a stream pipeline consisting of a source (typically by invoking the .stream() method on a data collection , a sequence of intermediate operations such as map() and filter(), and an optional terminal operation such as forEach() or average(). As an example, the following pipeline can be used to compute the average age of all active students using Java streams:
+```
+students.stream()
+    .filter(s -> s.getStatus() == Student.ACTIVE)
+    .mapToInt(a -> a.getAge())
+    .average();
+```
+From the viewpoint of this course, an important benefit of using Java streams when possible is that the pipeline can be made to execute in parallel by designating the source to be a parallel stream, i.e., by simply replacing students.stream() in the above code by students.parallelStream() or Stream.of(students).parallel(). This form of functional parallelism is a major convenience for the programmer, since they do not need to worry about explicitly allocating intermediate collections (e.g., a collection of all active students), or about ensuring that parallel accesses to data collections are properly synchronized.
+
+Optional Reading:
+
+1. Article on “Processing Data with Java SE 8 Streams”
+
+2. Tutorial on specifying Aggregate Operations using Java streams
+
+3. Documentation on java.util.stream.Collectors class for performing reductions on streams
+
+## 2.5 Determinism and Data Races
+
+**Lecture Summary**: In this lecture, we studied the relationship between determinism and data races in parallel programs. A parallel program is said to be functionally deterministic if it always computes the same answer when given the same input, and structurally deterministic if it always computes the same computation graph, when given the same input. The presence of data races often leads to functional and/or structural nondeterminism because a parallel program with data races may exhibit different behaviors for the same input, depending on the relative scheduling and timing of memory accesses involved in a data race. In general, the absence of data races is not sufficient to guarantee determinism. However, all the parallel constructs introduced in this course (“Parallelism”) were carefully selected to ensure the following Determinism Property:
+
+If a parallel program is written using the constructs introduced in this course and is guaranteed to never exhibit a data race, then it must be both functionally and structurally deterministic.
+
+Note that the determinism property states that all data-race-free parallel programs written using the constructs introduced in this course are guaranteed to be deterministic, but it does not imply that a program with a data race must be functionally/structurally non-deterministic. Furthermore, there may be cases of “benign” nondeterminism for programs with data races in which different executions with the same input may generate different outputs, but all the outputs may be acceptable in the context of the application, e.g., different locations for a search pattern in a target string.
+
+Optional Reading:
+
+1. Wikipedia article on Race condition
