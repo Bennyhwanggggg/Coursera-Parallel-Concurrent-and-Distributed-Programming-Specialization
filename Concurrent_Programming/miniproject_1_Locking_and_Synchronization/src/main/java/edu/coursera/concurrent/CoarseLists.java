@@ -97,16 +97,19 @@ public final class CoarseLists {
          */
         @Override
         boolean contains(final Integer object) {
-            lock.lock();
-            Entry pred = this.head;
-            Entry curr = pred.next;
+            try {
+                lock.lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
 
-            while (curr.object.compareTo(object) < 0) {
-                pred = curr;
-                curr = curr.next;
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+                return object.equals(curr.object);
+            } finally {
+                lock.unlock();
             }
-            lock.unlock();
-            return object.equals(curr.object);
         }
     }
 
@@ -141,25 +144,27 @@ public final class CoarseLists {
          */
         @Override
         boolean add(final Integer object) {
-            lock.writeLock().lock();
+            try {
+                lock.writeLock().lock();
 
-            Entry pred = this.head;
-            Entry curr = pred.next;
+                Entry pred = this.head;
+                Entry curr = pred.next;
 
-            while (curr.object.compareTo(object) < 0) {
-                pred = curr;
-                curr = curr.next;
-            }
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
 
-            if (object.equals(curr.object)) {
+                if (object.equals(curr.object)) {
+                    return false;
+                } else {
+                    final Entry entry = new Entry(object);
+                    entry.next = curr;
+                    pred.next = entry;
+                    return true;
+                }
+            } finally {
                 lock.writeLock().unlock();
-                return false;
-            } else {
-                final Entry entry = new Entry(object);
-                entry.next = curr;
-                pred.next = entry;
-                lock.writeLock().unlock();
-                return true;
             }
         }
 
@@ -170,23 +175,25 @@ public final class CoarseLists {
          */
         @Override
         boolean remove(final Integer object) {
-            lock.readLock().lock();
+            try {
+                lock.readLock().lock();
 
-            Entry pred = this.head;
-            Entry curr = pred.next;
+                Entry pred = this.head;
+                Entry curr = pred.next;
 
-            while (curr.object.compareTo(object) < 0) {
-                pred = curr;
-                curr = curr.next;
-            }
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
 
-            if (object.equals(curr.object)) {
-                pred.next = curr.next;
+                if (object.equals(curr.object)) {
+                    pred.next = curr.next;
+                    return true;
+                } else {
+                    return false;
+                }
+            } finally {
                 lock.readLock().unlock();
-                return true;
-            } else {
-                lock.readLock().unlock();
-                return false;
             }
         }
 
