@@ -1,4 +1,4 @@
-# Module 1 Quiz
+# Module 1 - Task Level Parallelism Quiz
 
 Question 1: Consider the following parallel pseudo-code that uses the async-finish notation for task creation and termination introduced in Lecture 1.1:
 ```
