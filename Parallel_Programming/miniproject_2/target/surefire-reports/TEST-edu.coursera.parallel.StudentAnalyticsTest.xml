@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.coursera.parallel.StudentAnalyticsTest" time="3.719" tests="6" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="idea.version" value="2018.1.5"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="10.0.1+10"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/mitsunari/Documents/Coursera-Parallel-Concurrent-and-Distributed-Programming-in-Java-Specialization/Parallel_Programming/miniproject_2"/>
+    <property name="java.vm.vendor" value="&quot;Oracle Corporation&quot;"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="AU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/mitsunari/Documents/Coursera-Parallel-Concurrent-and-Distributed-Programming-in-Java-Specialization/Parallel_Programming/miniproject_2"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="10.0.1+10"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/nx/zxlxq5vn6r1b242vmqy6g5rw0000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Applications/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/mitsunari/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="54.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.13.6"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/mitsunari"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="10"/>
+    <property name="user.name" value="mitsunari"/>
+    <property name="java.class.path" value="/Applications/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="10"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2018.1.5 test -f pom.xml"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="10.0.1"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Applications/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2018-04-17"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="18.3"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testAverageAgeOfEnrolledStudents" classname="edu.coursera.parallel.StudentAnalyticsTest" time="0.42"/>
+  <testcase name="testAverageAgeOfEnrolledStudentsPerf" classname="edu.coursera.parallel.StudentAnalyticsTest" time="0.573"/>
+  <testcase name="testMostCommonFirstNameOfInactiveStudents" classname="edu.coursera.parallel.StudentAnalyticsTest" time="0.631"/>
+  <testcase name="testMostCommonFirstNameOfInactiveStudentsPerf" classname="edu.coursera.parallel.StudentAnalyticsTest" time="1.428"/>
+  <testcase name="testCountNumberOfFailedStudentsOlderThan20" classname="edu.coursera.parallel.StudentAnalyticsTest" time="0.227"/>
+  <testcase name="testCountNumberOfFailedStudentsOlderThan20Perf" classname="edu.coursera.parallel.StudentAnalyticsTest" time="0.44">
+    <failure message="Expected parallel version to run at least 1.2x faster but speedup was 0.6319018404907976" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected parallel version to run at least 1.2x faster but speedup was 0.6319018404907976
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.parallel.StudentAnalyticsTest.testCountNumberOfFailedStudentsOlderThan20Perf(StudentAnalyticsTest.java:165)
+</failure>
+  </testcase>
+</testsuite>
