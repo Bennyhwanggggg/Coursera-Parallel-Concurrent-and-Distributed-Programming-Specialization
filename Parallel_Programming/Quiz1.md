@@ -40,7 +40,7 @@ C. S2;
 
 D. finish S2;
 
-A: A, D
+A: C, D **
 
 Question 3: Consider the computation graph in Figure 1 below (where black, green and red arrows represent continue, fork, and join edges respectively, as explained in Lecture 1.3).
 
@@ -73,7 +73,7 @@ D. S1 → S5 → S7 → S8
 
 E. S1 → S9
 
-A: A, C, E
+A: C, E
 
 Question 6: Recall that the concepts of WORK and SPAN were introduced in Lecture 1.3. Consider the pseudo-code in Figure 3 below for adding two lower triangular matrices (square matrices in which all the elements above and including the (0,0) to (n,n) diagonal are zero), in which each execution of the statement A[i][j] = B[i][j] + C[i][j]; represents one unit of work in the computation graph, WORK(S5) = 1:
 
@@ -99,7 +99,7 @@ C. n(n-1)/2
 
 D. None of the above
 
-A: D
+A: C
 
 Question 7: The Critical Path Length (CPL) of the program in Figure 3 in terms of nn equals __________.
 
@@ -113,7 +113,7 @@ D. None of the above
 
 A: B
 
-Question 8: Recall that Ideal Parallelism was also defined in Lecture 1.3. The Ideal Parallelism of the program in Figure 3, as a function of nn equals _________.      
+Question 8: Recall that Ideal Parallelism was also defined in Lecture 1.3. The Ideal Parallelism of the program in Figure 3, as a function of nn equals _________.
 
 Figure 3
 ```
@@ -136,7 +136,7 @@ C. n-1
 
 D. None of the above
 
-A: C
+A: B
 
 Question 9: Recall that multiprocessor schedules were introduced in Lecture 1.4. Though, by default, we focus on schedules with no unforced idleness in this course, this question will allow for all possible legal schedules, including those that may have unforced idleness, i.e., schedules in which a process may be idle even if there is work that is available to be executed.
 
@@ -150,7 +150,7 @@ B. There exists a legal schedule in which node P can complete execution before n
 
 C. There exists a legal schedule in which nodes J, L, O, Q can all be scheduled at the same time.
 
-A: C
+A: B
 
 Question 10: For an arbitrary computation graph and its schedule on P processors, which of the following relationships must always hold between Speedup(P) and Ideal Parallelism?
 
