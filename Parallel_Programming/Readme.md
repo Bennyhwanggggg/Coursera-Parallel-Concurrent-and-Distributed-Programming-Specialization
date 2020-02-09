@@ -10,10 +10,6 @@ This class is structured as a four (4) module, self-paced course, meaning you ca
 - Lecture: Multiprocessor Scheduling, Parallel Speedup
 - Lecture: Amdahl’s Law
 
-#### Module One - Demonstration Videos
-- Lecture: ReciprocalArraySum using Async-Finish
-- Lecture: ReciprocalArraySum using RecursiveAction’s in Java’s Fork/Join Framework
-
 #### Module One - Assignments
 - Quiz: Module 1 Quiz
 - Coding Mini Project 1: Reciprocal-Array-Sum using the Java Fork/Join Framework
@@ -24,10 +20,6 @@ This class is structured as a four (4) module, self-paced course, meaning you ca
 - Lecture: Memoization
 - Lecture: Java Streams
 - Lecture: Data Races and Determinism
-
-#### Module Two - Demonstration Videos
-- Lecture: ReciprocalArraySum using RecursiveTask's in Java's Fork/Join Framework
-- Lecture: Parallel List Processing Using Java Streams
 
 #### Module Two - Assignments
 - Quiz: Module 2 Quiz
@@ -40,10 +32,6 @@ This class is structured as a four (4) module, self-paced course, meaning you ca
 - Lecture: One-Dimensional Iterative Averaging
 - Lecture: Iteration Grouping/Chunking
 
-#### Module Three - Demonstration Videos
-- Lecture: Parallel Matrix Multiplication
-- Lecture: Parallel One-Dimensional Iterative Averaging
-
 #### Module Three - Assignments
 - Quiz: Module 3 Quiz
 - Coding Mini Project 3: Parallelizing Matrix-Matrix Multiply Using Loop
@@ -55,10 +43,6 @@ This class is structured as a four (4) module, self-paced course, meaning you ca
 - Lecture: Pipeline Parallelism
 - Lecture: Data Flow Computing
 
-#### Module Four - Demonstration Videos
-- Lecture: Phaser Examples
-- Lecture: Pipeline & Data Flow Parallelism
-
-####Module Four - Assignments
+#### Module Four - Assignments
 - Quiz: Module 4 Quiz
 - Coding Mini Project 4:Using Phasers to Optimize Data-Parallel Applications
