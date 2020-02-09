@@ -167,8 +167,7 @@ D. Structural but not functional determinism, with a data race
 
 A: D
 
-10.Question 10
-Finally, consider a variation of Question 8 in which every task that discovers a target value in the search space will set a shared global int variable to the location of the target value that was found (the variable is initialized to -1). However, no task will ever read the int variable during execution, hence there will be no early exit of tasks. The variable will only be read after all tasks have terminated. Note that, in general, there can be multiple possible locations for the target value, and we assume that any target location is acceptable in the final value of the int variable.
+Question 10: Finally, consider a variation of Question 8 in which every task that discovers a target value in the search space will set a shared global int variable to the location of the target value that was found (the variable is initialized to -1). However, no task will ever read the int variable during execution, hence there will be no early exit of tasks. The variable will only be read after all tasks have terminated. Note that, in general, there can be multiple possible locations for the target value, and we assume that any target location is acceptable in the final value of the int variable.
 
 Such a program will exhibit which of the following?
 
