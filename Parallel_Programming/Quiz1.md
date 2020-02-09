@@ -44,7 +44,7 @@ A: C, D **
 
 Question 3: Consider the computation graph in Figure 1 below (where black, green and red arrows represent continue, fork, and join edges respectively, as explained in Lecture 1.3).
 
-![Figure 1](/images/quiz1fig1.jpg "Figure 1")
+![Figure 1](/Parallel_Programming/images/quiz1fig1.jpg "Figure 1")
 
 What is the total WORK for the computation graph in Figure 1? Please enter an integer.
 
@@ -56,7 +56,7 @@ A: 8
 
 Question 5: Consider the computation graph in Figure 2 below (where black, green and red arrows represent continue, fork, and join edges respectively, as explained in Lecture 1.3).
 
-![Figure 2](/images/quiz1fig2.jpg "Figure 2")
+![Figure 2](/Parallel_Programming/images/quiz1fig2.jpg "Figure 2")
 
 For the computation graph in Figure 2, identify which of the following paths are critical paths?
 
@@ -142,7 +142,7 @@ Question 9: Recall that multiprocessor schedules were introduced in Lecture 1.4.
 
 Consider the computation graph shown below in Figure 4. Select the statement below that is true about legal schedules for this graph on 3 processors.
 
-![Figure 4](/images/quiz1fig4.jpg "Figure 4")
+![Figure 4](/Parallel_Programming/images/quiz1fig4.jpg "Figure 4")
 
 A. There exists a legal schedule in which node C can start execution before node B starts.
 
