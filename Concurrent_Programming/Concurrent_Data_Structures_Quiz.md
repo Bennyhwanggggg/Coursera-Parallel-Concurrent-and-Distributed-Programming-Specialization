@@ -135,8 +135,6 @@ A: A
 10.Question 10
 Is it possible for a minimum spanning tree to have the same total weight as its original graph?
 
-A. Yes
+Yes or No?
 
-B. No
-
-A: A
+A: Yes
