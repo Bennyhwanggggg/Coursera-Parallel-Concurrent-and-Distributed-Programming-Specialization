@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.coursera.concurrent.BoruvkaPerformanceTest" time="91.434" tests="2" errors="0" skipped="0" failures="1">
+<testsuite name="edu.coursera.concurrent.BoruvkaPerformanceTest" time="91.236" tests="2" errors="0" skipped="0" failures="1">
   <properties>
     <property name="idea.version" value="2018.1.5"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -63,23 +63,23 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testInputUSAroadNE" classname="edu.coursera.concurrent.BoruvkaPerformanceTest" time="57.658">
-    <failure message="Expected speedup of at least 1.700000x, but was 1.416052x" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected speedup of at least 1.700000x, but was 1.416052x
+  <testcase name="testInputUSAroadFLA" classname="edu.coursera.concurrent.BoruvkaPerformanceTest" time="37.662"/>
+  <testcase name="testInputUSAroadNE" classname="edu.coursera.concurrent.BoruvkaPerformanceTest" time="53.574">
+    <failure message="Expected speedup of at least 1.700000x, but was 1.408381x" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected speedup of at least 1.700000x, but was 1.408381x
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.assertTrue(Assert.java:20)
 	at edu.coursera.concurrent.BoruvkaPerformanceTest.testInputUSAroadNE(BoruvkaPerformanceTest.java:124)
 </failure>
-    <system-err><![CDATA[  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 2038
-  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 2361
-  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 2002
-  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1922
-  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1729
-  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1453
-  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1221
-  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1517
+    <system-err><![CDATA[  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1728
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 2138
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1792
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1882
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.boruvka.sequential.SeqBoruvka - 1714
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1356
   src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1225
-  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1425
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1391
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1217
+  src/main/resources/boruvka/USA-road-d.NE.gr.gz - edu.coursera.concurrent.ParBoruvka - 1264
 ]]></system-err>
   </testcase>
-  <testcase name="testInputUSAroadFLA" classname="edu.coursera.concurrent.BoruvkaPerformanceTest" time="33.776"/>
 </testsuite>

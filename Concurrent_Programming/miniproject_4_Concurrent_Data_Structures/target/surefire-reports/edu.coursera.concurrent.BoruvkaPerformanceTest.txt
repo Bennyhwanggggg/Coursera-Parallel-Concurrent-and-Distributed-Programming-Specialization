@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: edu.coursera.concurrent.BoruvkaPerformanceTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 91.467 sec <<< FAILURE! - in edu.coursera.concurrent.BoruvkaPerformanceTest
-testInputUSAroadNE(edu.coursera.concurrent.BoruvkaPerformanceTest)  Time elapsed: 57.658 sec  <<< FAILURE!
-junit.framework.AssertionFailedError: Expected speedup of at least 1.700000x, but was 1.416052x
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 91.27 sec <<< FAILURE! - in edu.coursera.concurrent.BoruvkaPerformanceTest
+testInputUSAroadNE(edu.coursera.concurrent.BoruvkaPerformanceTest)  Time elapsed: 53.574 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Expected speedup of at least 1.700000x, but was 1.408381x
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.assertTrue(Assert.java:20)
 	at edu.coursera.concurrent.BoruvkaPerformanceTest.testInputUSAroadNE(BoruvkaPerformanceTest.java:124)
