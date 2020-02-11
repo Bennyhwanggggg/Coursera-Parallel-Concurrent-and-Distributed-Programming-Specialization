@@ -59,7 +59,7 @@ A: D
 
 Question 5: Consider the following timeline. Assuming the enqueue operations are linearizable, which of the below are possible results from a sequence of dequeue operations?
 
-[![Figure 1](/Concurrent_Programming/images/quiz4fig1.png "Figure 1")
+![Figure 1](/Concurrent_Programming/images/quiz4fig1.png "Figure 1")
 
 Please choose all options that are correct.
 
