@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: edu.coursera.concurrent.BankTransactionsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.474 sec - in edu.coursera.concurrent.BankTransactionsTest
