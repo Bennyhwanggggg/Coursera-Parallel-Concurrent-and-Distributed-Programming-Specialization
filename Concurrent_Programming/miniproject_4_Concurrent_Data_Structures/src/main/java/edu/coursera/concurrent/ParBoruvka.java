@@ -31,27 +31,30 @@ public final class ParBoruvka extends AbstractBoruvka<ParBoruvka.ParComponent> {
             final SolutionToBoruvka<ParComponent> solution) {
 
         ParComponent current;
-        while (!nodesLoaded.isEmpty()) {
-            current = nodesLoaded.poll();
+        while ((current = nodesLoaded.poll()) != null) {
 
-            if (current == null || current.isDead || !current.lock.tryLock()) {
+            if (!current.lock.tryLock()) continue;
+
+            if (current.isDead) {
+                current.lock.unlock();
                 continue;
             }
 
             Edge<ParComponent> minEdge = current.getMinEdge();
             if (minEdge == null) {
-                current.lock.unlock();
                 solution.setSolution(current);
                 break;
             }
 
-            final ParComponent otherComponent = minEdge.getOther(current);
-            if (otherComponent.isDead) {
-                continue;
-            }
+            ParComponent otherComponent = minEdge.getOther(current);
             if (!otherComponent.lock.tryLock()) {
                 current.lock.unlock();
                 nodesLoaded.add(current);
+                continue;
+            }
+            if (otherComponent.isDead) {
+                otherComponent.lock.unlock();
+                current.lock.unlock();
                 continue;
             }
 
@@ -72,7 +75,7 @@ public final class ParBoruvka extends AbstractBoruvka<ParBoruvka.ParComponent> {
         /**
          *  TODO: Add lock here: Done!
          */
-        public final ReentrantLock lock = new ReentrantLock();
+        public ReentrantLock lock = new ReentrantLock();
         /**
          *  A unique identifier for this component in the graph that contains
          *  it.

@@ -1,5 +1,5 @@
 #surefire
-#Tue Feb 11 22:20:47 AEDT 2020
+#Wed Feb 12 00:34:43 AEDT 2020
 testSuiteDefinitionTestSourceDirectory=/Users/mitsunari/Documents/Coursera-Parallel-Concurrent-and-Distributed-Programming-in-Java-Specialization/Concurrent_Programming/miniproject_4_Concurrent_Data_Structures/src/test/java
 includes1=**/*Test.java
 includes2=**/*TestCase.java
