@@ -1,4 +1,4 @@
-# Module 3 - Message Passing
+# Module 3 Quiz - Message Passing
 Question 1: Say you have a logical 4-element array of data and 2 nodes to process that data with. The global view of this logical array is similarly a 4-element array storing the full dataset. How is node 0’s local view of that same array likely to be different from the global view, assuming that data is distributed as evenly as possible between the two nodes?
 
 A. Node 0’s local view will also store the full 4 elements. By being local to node 0 performance will be improved when accessing that array.
