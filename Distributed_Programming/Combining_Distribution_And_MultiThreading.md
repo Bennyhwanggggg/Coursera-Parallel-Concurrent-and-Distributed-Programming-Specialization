@@ -25,7 +25,22 @@ One approach to enable multithreading in MPI applications is to create one MPI p
 Optional Reading:
 1. Lecture by Prof. William Gropp on MPI, Hybrid Programming, and Shared Memory.
 
+## 4.4 Distributed Actors
+**Lecture Summary**: In this lecture, we studied distributed actors as another example of combining distribution and multi-threading. An actor is an object that has a mailbox, local state, a set of methods and an active (logical) thread of control that can receive one message at a time from the mailbox, invoke a method to perform the work needed by that message, and read and update the local state as needed. Message-passing in the actor model is nonblocking since the sender and receiver do not need to wait for each other when transmitting messages. We also studied a simple algorithm for generating prime numbers, called the Sieve of Eratosthenes, that can be conveniently implemented using actors. The actor paradigm is well suited to both multicore and distributed parallelism, since its message-passing model can be implemented efficiently via shared memory within a single process or in a more distributed manner across multiple processes.
 
+Most actor implementations that support distributed execution require you to perform the following steps. First, you will need to use some kind of configuration file to specify the host process on which each actor will execute as well as the port that can be used to receive messages from actors on other processes. Second, you will need the ability to create actors on remote processes. Third, you will need to provide some kind of logical name to refer to a remote actor (since a reference to the actor object can only be used within the process containing that actor). Finally, messages transmitted among actors that reside in different processes need to be serialized, as in client-server programming. Besides these steps, the essential approach to writing actor programs is the same whether the programs execute within a single process, or across multiple processes.
 
+Optional Readings:
+1. Wikipedia article on the Actor Model (also covered in the Concurrency course).
 
+2. Example of distributed actor configurations in article on Location Transparency in Akka actors.
 
+## 4.5 Distributed Reactive Programming
+**Lecture Summary**: In this lecture, we studied the reactive programming model and its suitability for implementing distributed service oriented architectures using asynchronous events. A key idea behind this model is to balance the “push'' and “pull'' modes found in different distributed programming models. For example, actors can execute in push mode, since the receiver has no control on how many messages it receives. Likewise, Java streams and Spark RDDs operate in pull mode, since their implementations are demand-driven (lazy). The adoption of distributed reactive programming is on a recent upswing, fueled in part by the availability of the Reactive Streams specification which includes support for multiple programming languages. In the case of Java, the specification consists of four interfaces: 𝙵𝚕𝚘𝚠.𝙿𝚞𝚋𝚕𝚒𝚜𝚑𝚎𝚛, 𝙵𝚕𝚘𝚠.𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎𝚛, 𝙵𝚕𝚘𝚠.𝙿𝚛𝚘𝚌𝚎𝚜𝚜, and 𝙵𝚕𝚘𝚠.𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚙𝚝𝚒𝚘𝚗.
+
+Conveniently, there is a standard Java implementation of the 𝙵𝚕𝚘𝚠.𝙿𝚞𝚋𝚕𝚒𝚜𝚑𝚎𝚛 interface in the form of the 𝚂𝚞𝚋𝚖𝚒𝚜𝚜𝚒𝚘𝚗𝙿𝚞𝚋𝚕𝚒𝚜𝚑𝚎𝚛 class. If we create an instance of this class called 𝚙𝚞𝚋, a publisher can submit information by calling 𝚙𝚞𝚋.𝚜𝚞𝚋𝚖𝚒𝚝(). Likewise, a subscriber can be registered by calling 𝚙𝚞𝚋.𝚜𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎(). Each subscriber has to implement two key methods, 𝚘𝚗𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎() and 𝚘𝚗𝙽𝚎𝚡𝚝(). Both methods allow the subscriber to specify how many elements to request at a time. Thus, a key benefit of reactive programming is that the programmer can control the "batching'' of information between the publisher and the subscriber to achieve a desired balance between the "push'' and "pull'' modes.
+
+Optional Reading
+1. Article on Reactive Programming with JDK 9 Flow API.
+
+2. Wikipedia article on reactive programming.
